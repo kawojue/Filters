@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Scripts -->
+    <script src="./script.js" defer type="module"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8b9b074ef2.js" crossorigin="anonymous"></script>
+
+    <!-- Font Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bg-pry-clr-0 font-poppins">
+    <section id="container" class="grid gap-[1rem] my-[4rem] mx-[1rem] md:mx-[4rem]">
+        <article id="filter-container" class="mx-[2rem] md:mx-auto">
+            <input type="text" placeholder="search..." id="search-input"
+                class="border-none bg-pry-clr-1 text-pry-clr-3 px-1 py-2 text-xs mb-7 tracking-wide overflow-hidden rounded-md">
+            <h3 class="text-pry-clr-4 text-[13.6px] font-semibold tracking-wider mb-2">Company</h3>
+            <div class="btn-container flex flex-col gap-2 items-start mb-7">
+                <button type="button" data-id="all">all</button>
+                <button type="button" data-id="ikea">ikea</button>
+                <button type="button" data-id="marcos">marcos</button>
+                <button type="button" data-id="caressa">caressa</button>
+                <button type="button" data-id="liddy">liddy</button>
+            </div>
+            <input type="range" title="price range" min="5" max="90" class="price-range">
+            <h3 class="text-sm trackin-widest text-pry-clr-4">Value: <span class="range-value">all</span></h3>
+        </article>
+        <article id="products-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem] md:gap-[1rem]">
+        </article>
+    </section>
+</body>
+
+</html>

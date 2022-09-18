@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-container button {
+    @apply capitalize bg-transparent text-pry-clr-2 text-sm tracking-wide;
+}
+
+.btn-container button:hover {
+    @apply text-pry-clr-4 transition-all ease-linear duration-300;
+}
+
+.product-container-center {
+    @apply flex flex-col gap-1 items-center text-center;
+}
+
+.product-container-center img {
+    @apply rounded-md w-[90vw] h-[15rem] object-cover;
+}
+
+.product-container-footer {
+    @apply mt-3 capitalize;
+}
+
+.product-container-footer p {
+    @apply text-pry-clr-2 text-[20px] mb-1;
+}
+
+.product-container-footer span {
+    @apply text-pry-clr-4 font-semibold text-[16px];
+}
+
+@media screen and (min-width: 768px) {
+    #container {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .product-container-center img {
+        @apply w-[90vw] h-[10rem]
+    }
+
+    .product-container-footer p,
+    .product-container-footer span {
+        @apply text-[13.6px];
+    }
+}
+
+@media screen and (min-width: 1168px) {
+    .product-container-center img {
+        @apply w-[300px]
+    }
+}
